@@ -1,0 +1,17 @@
+release/doubleformatter.o
+release/loaddatawindow.o
+release/loadfs.o
+release/loadintervalsdialog.o
+release/main.o
+release/mainwindow.o
+release/makenotewindow.o
+release/qcustomplot.o
+release/showdatadialog.o
+release/qrc_qmake_qmake_qm_files.o
+release/moc_loaddatawindow.o
+release/moc_loadfs.o
+release/moc_loadintervalsdialog.o
+release/moc_mainwindow.o
+release/moc_makenotewindow.o
+release/moc_qcustomplot.o
+release/moc_showdatadialog.o

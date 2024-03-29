@@ -1,0 +1,17 @@
+debug/doubleformatter.o
+debug/loaddatawindow.o
+debug/loadfs.o
+debug/loadintervalsdialog.o
+debug/main.o
+debug/mainwindow.o
+debug/makenotewindow.o
+debug/qcustomplot.o
+debug/showdatadialog.o
+debug/qrc_qmake_qmake_qm_files.o
+debug/moc_loaddatawindow.o
+debug/moc_loadfs.o
+debug/moc_loadintervalsdialog.o
+debug/moc_mainwindow.o
+debug/moc_makenotewindow.o
+debug/moc_qcustomplot.o
+debug/moc_showdatadialog.o

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MakeNoteWindow</class>
+ <widget class="QDialog" name="MakeNoteWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>496</width>
+    <height>459</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>11</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Заметка</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QPlainTextEdit" name="data"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QPushButton" name="saveButton">
+     <property name="toolTip">
+      <string>Сохранить заметку</string>
+     </property>
+     <property name="text">
+      <string>Сохранить</string>
+     </property>
+     <property name="shortcut">
+      <string>Return</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

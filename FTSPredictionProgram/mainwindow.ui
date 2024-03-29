@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1562</width>
+    <height>706</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>11</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Программа прогнозирования НВР</string>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="noteButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="toolTip">
+       <string>Сделать заметку</string>
+      </property>
+      <property name="text">
+       <string>Сделать заметку</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLabel" name="minLabel">
+      <property name="text">
+       <string>Минимум ряда: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QDoubleSpinBox" name="min">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="toolTip">
+       <string>Минимальное значение исходного числового ряда</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="minimum">
+       <double>-1000000000000.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>1000000000000.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QLabel" name="label_11">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>310</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Способ дефаззификации данных:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QComboBox" name="defuzzificationMethod">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="toolTip">
+       <string>Способ перевода данных из нечёткого представления в числовое</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>следуя Q. Song</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>centroid method</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="0" column="5">
+     <widget class="QPushButton" name="predictButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="toolTip">
+       <string>Спрогнозировать на 1 шаг (предварительно необходимо ввести данные, задать интервалы и определить нечёткие множества)</string>
+      </property>
+      <property name="text">
+       <string>Спрогнозировать</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="getData">
+      <property name="toolTip">
+       <string>Загрузка исходного временного ряда</string>
+      </property>
+      <property name="statusTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string/>
+      </property>
+      <property name="text">
+       <string>Загрузить данные</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="maxLabel">
+      <property name="text">
+       <string>Максимум ряда:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QDoubleSpinBox" name="max">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>Максимальное значение исходного числового ряда</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="minimum">
+       <double>-1000000000000.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>1000000000000.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QLabel" name="label_15">
+      <property name="text">
+       <string>Метрика для оценки точности:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4">
+     <widget class="QComboBox" name="metric">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>Метрика для оценки точности</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>MSE</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RMSE</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MAE</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MAPE</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MASE</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="5">
+     <widget class="QPushButton" name="fuzzifyedDataButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>Просмотреть исходный ряд переведённый в нечёткое представление (фаззифицированный)</string>
+      </property>
+      <property name="text">
+       <string>Просмотреть НВР</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QPushButton" name="getIntervals">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>Задание интервалов для определения нечётких множеств</string>
+      </property>
+      <property name="text">
+       <string>Задать интервалы</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="label">
+      <property name="maximumSize">
+       <size>
+        <width>180</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Среднее значение:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QDoubleSpinBox" name="average">
+      <property name="toolTip">
+       <string>Среднее арифметическое значений исходного числового ряда</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="minimum">
+       <double>-1000000000000.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>1000000000000.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="3">
+     <widget class="QLabel" name="label_16">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="statusTip">
+       <string/>
+      </property>
+      <property name="text">
+       <string>Ошибка прогнозирования:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QDoubleSpinBox" name="outputAccuracy">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="toolTip">
+       <string>Значение ошибки, вычисляемой при помощи указанной метрики, для истинных и предсказанных значений исходного ряда</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="decimals">
+       <number>3</number>
+      </property>
+      <property name="maximum">
+       <double>1000000000000000.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="5">
+     <widget class="QPushButton" name="traceButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>Просмотреть промежуточные вычисления</string>
+      </property>
+      <property name="text">
+       <string>Просмотреть ход выполнения</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QPushButton" name="getFS">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>Определение нечётких множеств</string>
+      </property>
+      <property name="text">
+       <string>Задать НМ</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QLabel" name="label_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Медиана:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QDoubleSpinBox" name="median">
+      <property name="toolTip">
+       <string>Медиана исходного числового ряда</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="minimum">
+       <double>-1000000000000.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>1000000000000.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>Спрогнозированное значение:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="4">
+     <widget class="QDoubleSpinBox" name="predictedValue">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="minimum">
+       <double>-1000000000000.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>1000000000000.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="5">
+     <widget class="QPushButton" name="resultsButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>Спрогнозированный числовой временной ряд</string>
+      </property>
+      <property name="text">
+       <string>Результаты прогнозирования</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="6">
+     <widget class="QCustomPlot" name="graph" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>150</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1562</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="openAction"/>
+    <addaction name="saveAction"/>
+    <addaction name="saveAsAction"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Настройки</string>
+    </property>
+    <property name="separatorsCollapsible">
+     <bool>true</bool>
+    </property>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>Модель прогнозирования</string>
+     </property>
+     <property name="separatorsCollapsible">
+      <bool>false</bool>
+     </property>
+     <addaction name="predictFTS"/>
+     <addaction name="predictWithFT"/>
+    </widget>
+    <widget class="QMenu" name="menu_5">
+     <property name="title">
+      <string>Язык / Language</string>
+     </property>
+     <addaction name="actionRussian"/>
+     <addaction name="actionEnglish"/>
+    </widget>
+    <addaction name="menu_4"/>
+    <addaction name="menu_5"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Справка</string>
+    </property>
+    <property name="separatorsCollapsible">
+     <bool>false</bool>
+    </property>
+    <addaction name="helpAction"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="saveAction">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+   <property name="toolTip">
+    <string>Сохранить результаты работы (Ctrl + S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="openAction">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+   <property name="toolTip">
+    <string>Открыть ранее сохранённые результаты работы (Ctrl + O)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="settingsAction">
+   <property name="text">
+    <string>Настройки</string>
+   </property>
+  </action>
+  <action name="helpAction">
+   <property name="text">
+    <string>Справка</string>
+   </property>
+  </action>
+  <action name="saveAsAction">
+   <property name="text">
+    <string>Сохранить как</string>
+   </property>
+   <property name="toolTip">
+    <string>Сохранить результаты работы как (Ctrl + Shift + S)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="predictFTS">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Прогнозирование НВР</string>
+   </property>
+   <property name="toolTip">
+    <string>Прогнозирование нечётких временных рядов</string>
+   </property>
+  </action>
+  <action name="predictWithFT">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Прогнозирование ВР на основе описания нечётких тенденций</string>
+   </property>
+   <property name="toolTip">
+    <string>Прогнозирование временных рядов на основе описания нечётких тенденций</string>
+   </property>
+  </action>
+  <action name="actionRussian">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Русский</string>
+   </property>
+  </action>
+  <action name="actionEnglish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

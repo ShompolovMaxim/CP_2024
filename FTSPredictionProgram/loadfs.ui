@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoadFS</class>
+ <widget class="QDialog" name="LoadFS">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1014</width>
+    <height>684</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>11</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Задание нечётких множеств</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <attribute name="title">
+       <string>Для исходного ряда</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>Определение нечётких множеств для фаззификации исходного временного ряда (доступно только после задания соответствующих интервалов)</string>
+      </attribute>
+      <attribute name="whatsThis">
+       <string>Определение нечётких множеств для фаззификации исходного временного ряда (доступно только после задания соответствующих интервалов)</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Способ автоматического задания НМ:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="fuzzifyMethod">
+         <property name="toolTip">
+          <string>Способ автоматического задания нечётких множеств</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>следуя Q. Song</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>'плавный' подход</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="fuzzifyButton">
+         <property name="toolTip">
+          <string>Задать нечёткие множества при помощи выбранного способа</string>
+         </property>
+         <property name="text">
+          <string>Задать НМ</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="3">
+        <widget class="QTextEdit" name="data">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="tabStopDistance">
+          <double>60.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <attribute name="title">
+       <string>Для ряда абсолютных значений первых разностей</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>Определение нечётких множеств для фаззификации временного ряда абсолютных значений первых разностей исходного временного ряда (доступно только при прогнозировании временных рядов на основе описания нечётких тенденций и только после задания соответствующих интервалов)</string>
+      </attribute>
+      <attribute name="whatsThis">
+       <string>Определение нечётких множеств для фаззификации временного ряда абсолютных значений первых разностей исходного временного ряда (доступно только при прогнозировании временных рядов на основе описания нечётких тенденций и только после задания соответствующих интервалов)</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Способ автоматического задания НМ:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="fuzzifyMethod_2">
+         <property name="toolTip">
+          <string>Способ автоматического задания нечётких множеств</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>следуя Q. Song</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>'плавный' подход</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="fuzzifyButton_2">
+         <property name="toolTip">
+          <string>Задать нечёткие множества при помощи выбранного способа</string>
+         </property>
+         <property name="text">
+          <string>Задать НМ</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="3">
+        <widget class="QTextEdit" name="data_2">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="tabStopDistance">
+          <double>60.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QPushButton" name="applyButton">
+     <property name="toolTip">
+      <string>Применить</string>
+     </property>
+     <property name="text">
+      <string>Применить</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
