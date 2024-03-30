@@ -155,6 +155,7 @@ void MainWindow::fitToStatus() {
         loadFS->setFT(false, 1);
         ftsOut = "";
         traceOut = "";
+        ui->predictedValue->setValue(0);
         ui->average->setValue(0);
         ui->median->setValue(0);
         ui->max->setValue(0);
@@ -171,6 +172,7 @@ void MainWindow::fitToStatus() {
         loadFS->setFT(false, 1);
         ftsOut = "";
         traceOut = "";
+        ui->predictedValue->setValue(0);
     }
     if (pStatus == DATA_LOADED) {
         predictedTs.clear();
@@ -182,6 +184,7 @@ void MainWindow::fitToStatus() {
         ui->outputAccuracy->setValue(0);
         ftsOut = "";
         traceOut = "";
+        ui->predictedValue->setValue(0);
         afterData = true;
     }
     if (pStatus == FS_LOADING) {
@@ -190,6 +193,7 @@ void MainWindow::fitToStatus() {
         ui->outputAccuracy->setValue(0);
         ftsOut = "";
         traceOut = "";
+        ui->predictedValue->setValue(0);
         afterData = true;
     }
     if (pStatus == FS_LOADED) {
@@ -198,6 +202,7 @@ void MainWindow::fitToStatus() {
         ui->outputAccuracy->setValue(0);
         ftsOut = "";
         traceOut = "";
+        ui->predictedValue->setValue(0);
         afterData = true;
         afterFss = true;
     }

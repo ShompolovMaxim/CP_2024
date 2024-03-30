@@ -46,7 +46,7 @@ void LoadIntervalsDialog::UpdateData() {
 
     ui->amount_2->setValue(intervalsD.size() - 1);
     data = "";
-    if (intervals.size() <= 2001) {
+    if (intervalsD.size() <= 2001) {
         for(size_t i = 0; i + 1 < intervalsD.size(); ++i) {
             data += "u" + std::to_string(i+1) + ":\t[" + DoubleFormatter::format(intervalsD[i], 3) + ";\t" + DoubleFormatter::format(intervalsD[i+1], 3) + ")\n";
         }
