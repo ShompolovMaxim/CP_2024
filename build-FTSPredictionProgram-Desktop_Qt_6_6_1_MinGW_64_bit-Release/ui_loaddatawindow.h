@@ -44,7 +44,7 @@ public:
     {
         if (LoadDataWindow->objectName().isEmpty())
             LoadDataWindow->setObjectName("LoadDataWindow");
-        LoadDataWindow->resize(1100, 684);
+        LoadDataWindow->resize(856, 574);
         QFont font;
         font.setPointSize(11);
         LoadDataWindow->setFont(font);

@@ -1,4 +1,5 @@
 debug/doubleformatter.o
+debug/helpdialog.o
 debug/loaddatawindow.o
 debug/loadfs.o
 debug/loadintervalsdialog.o
@@ -8,6 +9,7 @@ debug/makenotewindow.o
 debug/qcustomplot.o
 debug/showdatadialog.o
 debug/qrc_qmake_qmake_qm_files.o
+debug/moc_helpdialog.o
 debug/moc_loaddatawindow.o
 debug/moc_loadfs.o
 debug/moc_loadintervalsdialog.o

@@ -14,6 +14,7 @@ class HelpDialog : public QDialog
 public:
     explicit HelpDialog(QWidget *parent = nullptr);
     ~HelpDialog();
+    void retranslate();
 
 private slots:
     void on_pushButton_clicked();

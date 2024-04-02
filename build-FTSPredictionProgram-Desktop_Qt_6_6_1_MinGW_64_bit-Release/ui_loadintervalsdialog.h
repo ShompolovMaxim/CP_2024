@@ -63,7 +63,7 @@ public:
     {
         if (LoadIntervalsDialog->objectName().isEmpty())
             LoadIntervalsDialog->setObjectName("LoadIntervalsDialog");
-        LoadIntervalsDialog->resize(1062, 688);
+        LoadIntervalsDialog->resize(1062, 677);
         QFont font;
         font.setPointSize(11);
         LoadIntervalsDialog->setFont(font);

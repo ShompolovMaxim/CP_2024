@@ -18,3 +18,7 @@ void HelpDialog::on_pushButton_clicked()
     close();
 }
 
+void HelpDialog::retranslate() {
+    ui->retranslateUi(this);
+}
+

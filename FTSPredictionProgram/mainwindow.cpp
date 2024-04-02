@@ -1196,6 +1196,7 @@ void MainWindow::retranslate() {
     loadFS->retranslate();
     makeNoteWindow->retranslate();
     showDataDialog->retranslate();
+    helpDialog->retranslate();
 }
 
 void MainWindow::openHelp() {
