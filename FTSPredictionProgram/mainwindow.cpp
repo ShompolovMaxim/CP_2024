@@ -24,12 +24,15 @@ MainWindow::MainWindow(QWidget *parent)
     showDataDialog->setModal(true);
     makeNoteWindow = new MakeNoteWindow();
     makeNoteWindow->setModal(true);
+    helpDialog = new HelpDialog();
+    helpDialog->setModal(true);
     connect(loadDataWindow, &LoadDataWindow::dataLoaded, this, &MainWindow::dataLoaded);
     connect(loadIntervalsDialog, &LoadIntervalsDialog::intervalsLoaded, this, &MainWindow::intervalsLoaded);
     connect(loadFS, &LoadFS::fssGot, this, &MainWindow::fssGot);
     connect(ui->saveAction, SIGNAL(triggered()), this, SLOT(onMenuSave()));
     connect(ui->saveAsAction, SIGNAL(triggered()), this, SLOT(onMenuSaveAs()));
     connect(ui->openAction, SIGNAL(triggered()), this, SLOT(onMenuLoad()));
+    connect(ui->helpAction, SIGNAL(triggered()), this, SLOT(openHelp()));
     wGraphic = ui->graph;
     wGraphic->addGraph(wGraphic->xAxis, wGraphic->yAxis);
     wGraphic->addGraph(wGraphic->xAxis, wGraphic->yAxis);
@@ -1195,3 +1198,6 @@ void MainWindow::retranslate() {
     showDataDialog->retranslate();
 }
 
+void MainWindow::openHelp() {
+    helpDialog->show();
+}

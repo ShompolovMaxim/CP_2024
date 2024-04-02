@@ -12,6 +12,7 @@
 #include "makenotewindow.h"
 #include "qcustomplot.h"
 #include "PStatus.h"
+#include "helpdialog.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -68,6 +69,8 @@ private slots:
 
     void on_actionEnglish_triggered();
 
+    void openHelp();
+
 private:
 
     void showGraph();
@@ -81,6 +84,7 @@ private:
     std::vector<double> predictedTs;
     ShowDataDialog* showDataDialog;
     MakeNoteWindow* makeNoteWindow;
+    HelpDialog* helpDialog;
     QCustomPlot* wGraphic;
     std::string ftsOut;
     std::string traceOut;

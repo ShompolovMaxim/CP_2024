@@ -12,6 +12,7 @@ QMAKE_CXXFLAGS += -Wa,-mbig-obj
 
 SOURCES += \
     doubleformatter.cpp \
+    helpdialog.cpp \
     loaddatawindow.cpp \
     loadfs.cpp \
     loadintervalsdialog.cpp \
@@ -24,6 +25,7 @@ SOURCES += \
 HEADERS += \
     PStatus.h \
     doubleformatter.h \
+    helpdialog.h \
     loaddatawindow.h \
     loadfs.h \
     loadintervalsdialog.h \
@@ -33,6 +35,7 @@ HEADERS += \
     showdatadialog.h
 
 FORMS += \
+    helpdialog.ui \
     loaddatawindow.ui \
     loadfs.ui \
     loadintervalsdialog.ui \

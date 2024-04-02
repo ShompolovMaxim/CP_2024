@@ -29,7 +29,7 @@ public:
     {
         if (ShowDataDialog->objectName().isEmpty())
             ShowDataDialog->setObjectName("ShowDataDialog");
-        ShowDataDialog->resize(1239, 802);
+        ShowDataDialog->resize(809, 618);
         QFont font;
         font.setPointSize(11);
         ShowDataDialog->setFont(font);
